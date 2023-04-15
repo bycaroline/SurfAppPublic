@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Surf App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .bg {
+            position: relative;
+            background-image: url('images/background.jpg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* display: flex;
+            justify-items: center;
+            align-items: center; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="box">
+            <div class="main">
+                <div class="navbar">
+                    <a href="/About">
+                        <p>About</p>
+                    </a>
+                </div>
+                <div class="section">
+                    <h1>Surf Forecast Notification</h1>
+                    <h2>Knäbäckshusen</h2>
+                    <div class="condition">
+                        <h3>Status in 24 hours: </h3>
+                        <p class="status">
+                            <%= foo %>
+                        </p>
+                    </div>
+                    <div class="surroundSub">
+                        <div class="subscription">
+                            <form action="/" method="post">
+                                <input type="email" name="newAddress" placeholder="Email address"><button
+                                    type='submit'>Subscribe</button>
+                            </form>
+                            <form action="/delete" method="post">
+                                <input type="email" name="deleteAddress" placeholder="Email address"><button
+                                    type="submit">Unsubscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+</html>
